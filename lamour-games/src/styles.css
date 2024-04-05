@@ -8,6 +8,13 @@ ul {
     list-style: none;
 }
 
+li a {
+    text-decoration: none;
+}
+
+li h3{
+    color: white;
+}
 body {
     background-image: url(../public/assets/background.jpg);
     background-position: top center;

@@ -5,7 +5,7 @@ import ListItem from "./components/ListItem";
 
 const gamesListData = [
   {
-    url: "https://www.twitch.tv/directory/game/Minecraft,",
+    url: "https://www.twitch.tv/directory/game/Minecraft",
     imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-188x250.jpg",
     alt: "Imagem do jogo Minecraft",
   },
@@ -25,6 +25,12 @@ const gamesListData = [
     url: "https://www.twitch.tv/directory/category/palworld",
     imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/1036710512_IGDB-144x192.jpg",
     alt: "Imagem do jogo Palworld",
+  },
+
+  {
+    url: "https://www.twitch.tv/directory/category/fortnite",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+    alt: "Imagem do jogo Fortnite",
   },
 ];
 
