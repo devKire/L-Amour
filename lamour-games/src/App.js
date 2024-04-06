@@ -2,6 +2,8 @@ import "./styles.css";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import ListItem from "./components/ListItem";
+import UpcomingEvents from "./components/UpcomingEvents";
+import PastEvents from "./components/PastEvents";
 
 const gamesListData = [
   {
@@ -23,7 +25,8 @@ const gamesListData = [
 
   {
     url: "https://www.twitch.tv/directory/category/palworld",
-    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/1036710512_IGDB-144x192.jpg",
+    imageUrl:
+      "https://static-cdn.jtvnw.net/ttv-boxart/1036710512_IGDB-144x192.jpg",
     alt: "Imagem do jogo Palworld",
   },
 
@@ -44,21 +47,21 @@ const admListData = [
 
   {
     url: "https://discord.gg/wkczEEUnDX",
-    imageUrl: "https://github.com/Thiago.png",
+    imageUrl: "/assets/alucard.jpg",
     alt: "Imagem do Alucard",
     subtitle: "Alucard",
   },
 
   {
     url: "https://discord.gg/wkczEEUnDX",
-    imageUrl: "https://github.com/Homer.png",
+    imageUrl: "/assets/luan.jpg",
     alt: "Imagemd do Luan",
     subtitle: "Luan",
   },
 
   {
     url: "https://discord.gg/wkczEEUnDX",
-    imageUrl: "https://github.com/Eduardo.png",
+    imageUrl: "/assets/fbi.jpg",
     alt: "Imagemd do FBI",
     subtitle: "FBI",
   },
@@ -79,6 +82,41 @@ const socialListData = [
     url: "https://chat.whatsapp.com/HggfZseAPPvFwq3FeP5vxz?fbclid=IwAR3_t3PRVi9Qgv35jm7-BdDigrDCdenqgJP67jdMG1eUDtWCcjP1bY1vzfU_aem_AWEooImTEwW1C_-cwMk__8NHegMuricwyczO7mK4pnT2CMrLU6ns09orahsvjqhQi3_lZKs8UshZ3AyKInmQNKCA",
     imageUrl: "/assets/whatsapp.svg",
     alt: "Whatsapp da L'Amour Games",
+  },
+  {
+    url: "https://www.instagram.com/lamourgames/",
+    imageUrl: "/assets/instagram.svg",
+    alt: "Instagram da L'Amour Games",
+  },
+];
+
+const eventListData = [
+  {
+    upcomingEvents: [
+      {
+        title: "PVP no Minecraft",
+        imageUrl:
+          "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-188x250.jpg",
+        date: "2024-04-12",
+        time: "17:00",
+        description: "descrição do evento",
+        instructions:
+          "Para participar, entre no servidor Minecraft no horário agendado e junte-se à equipe.",
+        requirements: "Possuir uma conta Minecraft Bedrock Edition.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+    ],
+    pastEvents: [
+      {
+        title: "Jogatina no Battlefield 2042",
+        date: "2024-04-15",
+        results: "1º Lugar: Alucard, 2º Lugar: Luan",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        imageUrl:
+          "https://static-cdn.jtvnw.net/ttv-boxart/514974_IGDB-144x192.jpg",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+    ],
   },
 ];
 
@@ -110,7 +148,7 @@ function App() {
         <Section
           title="ADM's do Server"
           subtitle="Com esses caras você vai poder entrar em contato caso tenha alguma dúvida ou denúncia no server."
-          className="adm-list"
+          className="adms-list"
         >
           {/* ITEMS DA LISTA */}
           {admListData.map(function (item) {
@@ -119,11 +157,31 @@ function App() {
                 url={item.url}
                 imageUrl={item.imageUrl}
                 alt={item.alt}
-                subtitle= {item.subtitle}
+                subtitle={item.subtitle}
               />
             );
           })}
         </Section>
+
+        <Section
+          title="Eventos"
+          subtitle="Os eventos que estamos fazendo agora no servidor:"
+          className="events-list"
+        >
+          {eventListData.map(function (item) {
+            return <UpcomingEvents upcomingEvents={item.upcomingEvents} />;
+          })}
+        </Section>
+        <Section
+          title="Eventos Passados:"
+          subtitle="Os resultados, fotos e outras informações vão estar nas nossas redes sociais:"
+          className="events-list"
+        >
+          {eventListData.map(function (item) {
+            return <PastEvents pastEvents={item.pastEvents} />;
+          })}
+        </Section>
+
         <Section
           title="Redes Sociais"
           subtitle="Se conecta com a gente!"
