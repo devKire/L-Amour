@@ -12,11 +12,6 @@ li a {
     text-decoration: none;
 }
 
-li h3{
-    color: white;
-}
-
-
 body {
     background-color: #121214;
     background-image:linear-gradient(90deg, #121214, #292930);
@@ -86,6 +81,10 @@ section div {
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
+}
+
+section h1 {
+    color: red;
 }
 
 section h2 {

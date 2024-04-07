@@ -94,22 +94,23 @@ const eventListData = [
   {
     upcomingEvents: [
       {
-        title: "PVP no Minecraft",
+        title: "Molishop no Fortnite",
         imageUrl:
-          "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-188x250.jpg",
-        date: "2024-04-12",
-        time: "17:00",
-        description: "descrição do evento",
+          "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        date: "2024-04-13",
+        dateTxt: "13 de Abril de 2024 (Sábado)",
+        time: "18:00",
+        description: "Vamos nos reunir para se divertir numa partida de Molishop, quanto mais participantes melhor!",
         instructions:
-          "Para participar, entre no servidor Minecraft no horário agendado e junte-se à equipe.",
-        requirements: "Possuir uma conta Minecraft Bedrock Edition.",
+          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas call.",
+        requirements: "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
     ],
     pastEvents: [
       {
         title: "Jogatina no Battlefield 2042",
-        date: "2024-04-15",
+        dateTxt: "30 de Março de 2024 (Sábado)",
         results: "1º Lugar: Alucard, 2º Lugar: Luan",
         media: "Confira algumas fotos do evento em nossas redes sociais.",
         imageUrl:
@@ -143,24 +144,6 @@ function App() {
               );
             }) //função que vai percorrer o array e criar os itens da lista: map recebendo outra função que vai receber cada item
           }
-        </Section>
-
-        <Section
-          title="ADM's do Server"
-          subtitle="Com esses caras você vai poder entrar em contato caso tenha alguma dúvida ou denúncia no server."
-          className="adms-list"
-        >
-          {/* ITEMS DA LISTA */}
-          {admListData.map(function (item) {
-            return (
-              <ListItem
-                url={item.url}
-                imageUrl={item.imageUrl}
-                alt={item.alt}
-                subtitle={item.subtitle}
-              />
-            );
-          })}
         </Section>
 
         <Section

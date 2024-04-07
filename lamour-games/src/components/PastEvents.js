@@ -5,7 +5,7 @@ export default function PastEvents(props) {
         <ul>
           <li key={index}>
             <h4>{event.title}</h4>
-            <p>Data: {event.date}</p>
+            <p>Data: {event.dateTxt}</p>
             <p>Resultados: {event.results}</p>
             <p>{event.media}</p>
             {event.imageUrl && <img src={event.imageUrl} alt={event.title} />}

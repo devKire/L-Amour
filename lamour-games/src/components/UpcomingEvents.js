@@ -7,7 +7,11 @@ export default function UpcomingEvents(props) {
     const difference = eventTime - now;
 
     if (difference < 0) {
-      return "Evento em andamento";
+      return (
+        <h1>
+          Evento em andamento
+        </h1>
+        );
     }
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -47,7 +51,7 @@ export default function UpcomingEvents(props) {
             <h4>{event.title}</h4>
             <h5>{timeUntilEvent}</h5>
             {event.imageUrl && <img src={event.imageUrl} alt={event.title} />}
-            <p>Data: {event.date}</p>
+            <p>Data: {event.dateTxt}</p>
             <p>Horário: {event.time}</p>
             <p>{event.description}</p>
             <p>Instruções: {event.instructions}</p>
