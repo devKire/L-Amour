@@ -94,7 +94,7 @@ const eventListData = [
   {
     upcomingEvents: [
       {
-        title: "Molishop no Fortnite",
+        title: "Jogatina no Fortnite",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
         date: "2024-04-13",
