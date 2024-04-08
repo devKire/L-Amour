@@ -145,7 +145,24 @@ function App() {
             }) //função que vai percorrer o array e criar os itens da lista: map recebendo outra função que vai receber cada item
           }
         </Section>
-
+          <Section
+            title="Adm's do Server"
+            subtitle="Os caras que fazem tudo acontecer, e que você pode ir conversar caso tenha alguma duvida, dica ou denúncia."
+            className="adms-list"
+            >
+              {
+                admListData.map(function(item){
+                  return (
+                    <ListItem
+                      url={item.url}
+                      imageUrl={item.imageUrl}
+                      alt={item.alt}
+                      subtitle={item.subtitle}
+                    />
+                  )
+                })
+              }
+          </Section>
         <Section
           title="Eventos"
           subtitle="Os eventos que estamos fazendo agora no servidor:"
