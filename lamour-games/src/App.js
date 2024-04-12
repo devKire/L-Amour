@@ -99,7 +99,7 @@ const eventListData = [
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
         date: "2024-04-13",
         dateTxt: "13 de Abril de 2024 (Sábado)",
-        time: "18:00",
+        time: "19:00",
         description: "Vamos nos reunir para se divertir numa partida de Molishop, quanto mais participantes melhor!",
         instructions:
           "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas call.",
