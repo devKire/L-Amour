@@ -97,10 +97,10 @@ const eventListData = [
         title: "Jogatina no Fortnite",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-        date: "2024-04-13",
-        dateTxt: "13 de Abril de 2024 (Sábado)",
-        time: "19:00",
-        description: "Vamos nos reunir para se divertir numa partida de Molishop, quanto mais participantes melhor!",
+        date: "2024-04-20",
+        dateTxt: "20 de Abril de 2024 (Sábado)",
+        time: "20:00",
+        description: "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor!",
         instructions:
           "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas call.",
         requirements: "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
@@ -108,6 +108,14 @@ const eventListData = [
       },
     ],
     pastEvents: [
+      {
+        title: "Jogatina no Fortnite",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        dateTxt: "13 de Abril de 2024 (Sábado)",
+        results: "1º Lugar: Alucard, 2º Lugar: Luan",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
       {
         title: "Jogatina no Battlefield 2042",
         dateTxt: "30 de Março de 2024 (Sábado)",
