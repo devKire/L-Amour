@@ -4,6 +4,7 @@ import Section from "./components/Section";
 import ListItem from "./components/ListItem";
 import UpcomingEvents from "./components/UpcomingEvents";
 import PastEvents from "./components/PastEvents";
+import Modal from "./components/Modal"
 
 const gamesListData = [
   {
@@ -132,6 +133,7 @@ const eventListData = [
 function App() {
   return (
     <div className="App">
+      <Modal />
       <Header />
       <main>
         {/* LISTA */}
