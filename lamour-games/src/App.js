@@ -95,6 +95,22 @@ const eventListData = [
   {
     upcomingEvents: [
       {
+        title: "Jogatina no Call of Duty Mobile",
+        imageUrl:
+          "https://static-cdn.jtvnw.net/ttv-boxart/512818_IGDB-144x192.jpg",
+        date: "2024-04-27",
+        dateTxt: "27 de Abril de 2024 (Sábado)",
+        time: "19:30",
+        description: "Vamos nos reunir para se divertir em varias modos de jogo: Mata Mata em equipe, Linha de frente, Contra Todos e Super Ataque dos Mortos Vivos. Quanto mais participantes melhor!",
+        instructions:
+          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas call de EVENTOS com os adms auxiliando todo mundo.",
+        requirements: "Possuir uma conta no Cod Mobile e algum meio para jogar: Mobile ou Pc com Emulador",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+    ],
+
+    descriptionEvents: [
+      {
         title: "Jogatina no Fortnite",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
