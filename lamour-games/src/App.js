@@ -112,15 +112,23 @@ const eventListData = [
       {
         title: "Jogatina no Fortnite",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        dateTxt: "20 de Abril de 2024 (Sábado)",
+        results: ". . .",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+      {
+        title: "Jogatina no Fortnite",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
         dateTxt: "13 de Abril de 2024 (Sábado)",
-        results: "1º Lugar: Alucard, 2º Lugar: Luan",
+        results: ". . .",
         media: "Confira algumas fotos do evento em nossas redes sociais.",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
       {
         title: "Jogatina no Battlefield 2042",
         dateTxt: "30 de Março de 2024 (Sábado)",
-        results: "1º Lugar: Alucard, 2º Lugar: Luan",
+        results: ". . .",
         media: "Confira algumas fotos do evento em nossas redes sociais.",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/514974_IGDB-144x192.jpg",
