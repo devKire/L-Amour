@@ -12,16 +12,17 @@ const gamesListData = [
     imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-188x250.jpg",
     alt: "Imagem do jogo Minecraft",
   },
+
+  {
+    url: "https://www.twitch.tv/directory/category/fortnite",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+    alt: "Imagem do jogo Fortnite",
+  },
+
   {
     url: "https://www.twitch.tv/directory/category/battlefield-2042",
     imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/514974_IGDB-144x192.jpg",
     alt: "Imagem do Battlefield 2042",
-  },
-
-  {
-    url: "https://www.twitch.tv/directory/category/for-honor",
-    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/490382-144x192.jpg",
-    alt: "Imagem do jogo For Honor",
   },
 
   {
@@ -32,9 +33,21 @@ const gamesListData = [
   },
 
   {
-    url: "https://www.twitch.tv/directory/category/fortnite",
-    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-    alt: "Imagem do jogo Fortnite",
+    url: "https://www.twitch.tv/directory/category/for-honor",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/490382-144x192.jpg",
+    alt: "Imagem do jogo For Honor",
+  },
+
+  {
+    url: "https://www.twitch.tv/directory/category/forza-horizon-5",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/1757732267_IGDB-144x192.jpg",
+    alt: "Imagem do jogo Forza Horizon 5",
+  },
+
+  {
+    url: "https://www.twitch.tv/directory/category/need-for-speed-heat",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/512782_IGDB-144x192.jpg",
+    alt: "Imagem do jogo Need For Speed Heat",
   },
 ];
 
