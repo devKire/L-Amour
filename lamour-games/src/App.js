@@ -108,6 +108,22 @@ const eventListData = [
   {
     upcomingEvents: [
       {
+        title: "Jogatina no Fortnite",
+        imageUrl:
+          "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        date: "2024-05-20",
+        dateTxt: "04 de Maio de 2024 (Sábado)",
+        time: "20:00",
+        description: "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor!",
+        instructions:
+          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas chamadas.",
+        requirements: "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+    ],
+
+    descriptionEvents: [
+      {
         title: "Jogatina no Call of Duty Mobile",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/512818_IGDB-144x192.jpg",
@@ -121,23 +137,15 @@ const eventListData = [
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
     ],
-
-    descriptionEvents: [
+    pastEvents: [
       {
-        title: "Jogatina no Fortnite",
-        imageUrl:
-          "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-        date: "2024-04-20",
-        dateTxt: "20 de Abril de 2024 (Sábado)",
-        time: "20:00",
-        description: "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor!",
-        instructions:
-          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas call.",
-        requirements: "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
+        title: "Jogatina no Call of Duty Mobile",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/512818_IGDB-144x192.jpg",
+        dateTxt: "27 de Abril de 2024 (Sábado)",
+        results: ". . .",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
-    ],
-    pastEvents: [
       {
         title: "Jogatina no Fortnite",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
