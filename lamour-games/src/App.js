@@ -111,7 +111,7 @@ const eventListData = [
         title: "Jogatina no Fortnite",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-        date: "2024-05-20",
+        date: "2024-05-04",
         dateTxt: "04 de Maio de 2024 (Sábado)",
         time: "20:00",
         description: "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor!",
