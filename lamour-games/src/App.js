@@ -5,6 +5,7 @@ import ListItem from "./components/ListItem";
 import UpcomingEvents from "./components/UpcomingEvents";
 import PastEvents from "./components/PastEvents";
 import Modal from "./components/Modal"
+import ListItem02 from "./components/ListItem02";
 
 const gamesListData = [
   {
@@ -51,6 +52,51 @@ const gamesListData = [
   },
 ];
 
+const groupsListData = [
+  {
+    url: "https://chat.whatsapp.com/JvtTHwRddyr7bRPXZV24xq",
+    imageUrl: "/assets/logo_MINE.jpg",
+    alt: "Imagem do jogo Minecraft",
+    subtitle: "Grupo do MINECRAFT",
+  },
+
+  {
+    url: "https://chat.whatsapp.com/Iklr7HcO2Fm64w6XR0a3iC",
+    imageUrl: "/assets/logo_FORTNITE.jpg",
+    alt: "Imagem do jogo Fortnite",
+    subtitle: "Grupo do FORTNITE",
+  },
+
+  {
+    url: "https://chat.whatsapp.com/DAlqzmIBVtQ16fMc9VbSxx",
+    imageUrl: "/assets/logo_BF2042.jpg",
+    alt: "Imagem do jogo Battlefield 2042",
+    subtitle: "Grupo do BATTLEFIELD 2042",
+  },
+
+  {
+    url: "https://chat.whatsapp.com/HK06P9clyUA1HUmbPguuTT",
+    imageUrl:
+      "/assets/logo_GROUNDED.jpg",
+    alt: "Imagem do jogo GROUNDED",
+    subtitle: "Grupo do GROUNDED",
+  },
+
+  {
+    url: "https://chat.whatsapp.com/LUgsGalSFUKA1Dkl6FKJhe",
+    imageUrl: "/assets/logo_SOT.jpg",
+    alt: "Imagem do jogo SEA OF THIEVES",
+    subtitle: "Grupo do SEA OF THIEVES",
+  },
+
+  {
+    url: "https://chat.whatsapp.com/GpbSn1qSsnd9hKVaTfZ4CJ",
+    imageUrl: "/assets/logo.png",
+    alt: "Imagem do jogo AGE OF EMPIRES IV",
+    subtitle: "Grupo do AGE OF EMPIRES IV",
+  },
+
+];
 const admListData = [
   {
     url: "https://discord.gg/wkczEEUnDX",
@@ -111,9 +157,9 @@ const eventListData = [
         title: "Jogatina no Fortnite",
         imageUrl:
           "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-        date: "2024-05-04",
-        dateTxt: "04 de Maio de 2024 (Sábado)",
-        time: "20:00",
+        date: "2024-05-11",
+        dateTxt: "11 de Maio de 2024 (Sábado)",
+        time: "18:00",
         description: "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor!",
         instructions:
           "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas chamadas.",
@@ -138,6 +184,14 @@ const eventListData = [
       },
     ],
     pastEvents: [
+      {
+        title: "Jogatina no Fortnite",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        dateTxt: "04 de Maio de 2024 (Sábado)",
+        results: ". . .",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
       {
         title: "Jogatina no Call of Duty Mobile",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/512818_IGDB-144x192.jpg",
@@ -178,7 +232,6 @@ const eventListData = [
 function App() {
   return (
     <div className="App">
-      <Modal />
       <Header />
       <main>
         {/* LISTA */}
@@ -217,6 +270,26 @@ function App() {
                   )
                 })
               }
+          </Section>
+          <Section
+            title="Grupos do Whatsapp"
+            subtitle="Para os que querem jogar apenas um tipo de jogo ou conhecer jogos novos!"
+            className="groups-list"
+            >
+              <div>
+              {
+                groupsListData.map(function(item){
+                  return (
+                    <ListItem02
+                      url={item.url}
+                      imageUrl={item.imageUrl}
+                      alt={item.alt}
+                      subtitle={item.subtitle}
+                    />
+                  )
+                })
+              }
+              </div>
           </Section>
         <Section
           title="Eventos"

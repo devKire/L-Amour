@@ -127,6 +127,51 @@ section ul li:hover {
     border: 1px solid #443E54;
 }
 
+/* General styling for the groups list */
+.groups-list {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Styling for each group item */
+.groups-list a {
+    display: inline-block;
+    color: #fff;
+    background-image: linear-gradient(90deg, #0f8509 0%, #00ff48 50.52%, #60eaac 100%);
+    padding: 4px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Styling for the image within each group item */
+.groups-list img {
+    width: 100px;
+    border-radius: 10%;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+/* Styling for the text container within each group item */
+.groups-list a div {
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Styling for the heading within each group item */
+.groups-list a h3 {
+    letter-spacing: -0.47px;
+    text-align: center;
+    margin-top: 0; /* Reset margin top */
+}   
+
+/* Hover effect for each group item */
+.groups-list a:hover {
+    transform: scale(1.04);
+}
+
+
 .events-list{
     text-align: center;
     margin: 10px;
@@ -157,6 +202,55 @@ section ul li:hover {
     background: linear-gradient(to right, #FF4B2B, #FF416C); 
     transform: scale(1.1)
 }
+
+.past-events {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .past-events select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .event-details {
+    margin-top: 20px;
+  }
+  
+  .event-details h4 {
+    margin-bottom: 10px;
+  }
+  
+  .event-details p {
+    margin-bottom: 5px;
+  }
+  
+  .event-details img {
+    margin: 10px auto; /* Center the image */
+    display: block; /* Ensure it's a block element for margin auto to work */
+    border-radius: 8px;
+  }
+  
+  .event-details a {
+    display: inline-block; /* Ensure the link is a block element for padding to work */
+    text-decoration: none;
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 1s infinite;
+    margin-top: 10px;
+  }
+  
+  .event-details a:hover {
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    transform: scale(1.1);
+  }
+  
 
 /* animation */
 
