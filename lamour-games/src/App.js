@@ -91,7 +91,7 @@ const groupsListData = [
 
   {
     url: "https://chat.whatsapp.com/GpbSn1qSsnd9hKVaTfZ4CJ",
-    imageUrl: "/assets/logo.png",
+    imageUrl: "/assets/logo_AOE4.jpg",
     alt: "Imagem do jogo AGE OF EMPIRES IV",
     subtitle: "Grupo do AGE OF EMPIRES IV",
   },
