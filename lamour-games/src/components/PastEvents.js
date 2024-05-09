@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 
 export default function PastEvents({ pastEvents }) {
+  // Remove events with duplicate dates
+  const uniqueEvents = pastEvents.reduce((unique, event) => {
+    if (!unique.some((e) => e.dateTxt === event.dateTxt)) {
+      unique.push(event);
+    }
+    return unique;
+  }, []);
+
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const handleEventChange = (event) => {
-    const selected = pastEvents.find((e) => e.title === event);
+  const handleEventChange = (eventDateTxt) => {
+    const selected = pastEvents.find((e) => e.dateTxt === eventDateTxt);
     setSelectedEvent(selected);
   };
 
   return (
     <div className="past-events">
-      <select value={selectedEvent ? selectedEvent.title : null} onChange={(e) => handleEventChange(e.target.value)}>
-        <option value={null}>Ver eventos Passados</option>
-        {pastEvents.map((event, index) => (
-          <option key={index} value={event.title}>
+      <select value={selectedEvent ? selectedEvent.dateTxt : ''} onChange={(e) => handleEventChange(e.target.value)}>
+        <option value="">Ver eventos Passados</option>
+        {uniqueEvents.map((event) => (
+          <option key={event.dateTxt} value={event.dateTxt}>
             {event.dateTxt}
           </option>
         ))}
       </select>
-      {selectedEvent && (
+      {selectedEvent ? (
         <div className="event-details">
           <h4>{selectedEvent.title}</h4>
           <p>Data: {selectedEvent.dateTxt}</p>
@@ -29,7 +37,7 @@ export default function PastEvents({ pastEvents }) {
             Ver resultados
           </a>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

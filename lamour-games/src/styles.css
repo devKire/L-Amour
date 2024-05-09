@@ -326,7 +326,7 @@ main section:nth-child(3) {
 }
 
 /* Estilos para o conteúdo do modal */
-.modal {
+.modalV {
   position: relative;
   z-index: 1010;            /* Z-index para ficar acima do overlay */
   overflow: hidden;
@@ -339,6 +339,13 @@ main section:nth-child(3) {
   align-items: center;       /* Centraliza verticalmente */
 }
 
+.modalAdm {
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+  }
 /* Botão de fechar do modal */
 .close-button {
   position: absolute;        /* Posição absoluta em relação ao modal */
@@ -370,7 +377,7 @@ iframe {
 
 /* Media query para ajustar o modal em telas menores */
 @media (max-width: 768px) {
-  .modal {
+  .modalV {
     width: 100%;            /* Largura total */
     max-width: 100%;        /* Largura máxima */
     max-height: 90vh;       /* Altura máxima em viewport height */

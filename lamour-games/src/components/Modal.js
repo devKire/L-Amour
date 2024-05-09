@@ -21,7 +21,7 @@ const Modal = () => {
           <button className="close-button" onClick={handleCloseModal}>
             Fechar
           </button>
-          <div className="modal">
+          <div className="modalV">
             <iframe
               width="560"
               height="315"
