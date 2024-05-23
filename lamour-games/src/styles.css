@@ -383,3 +383,10 @@ iframe {
     max-height: 90vh;       /* Altura máxima em viewport height */
   }
 }
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

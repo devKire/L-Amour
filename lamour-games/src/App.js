@@ -192,7 +192,7 @@ const eventListData = [
     upcomingEvents: [
       {
         title: "🪂 Campeonato valendo 4 passes de Batalhas ou Valor no PIX 🪂",
-        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        imageUrl: "/assets/capaCampeonato.png",
         date: "2024-06-01",
         dateTxt: "01 de Junho de 2024 (Sábado)",
         time: "20:00",

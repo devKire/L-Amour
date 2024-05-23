@@ -49,7 +49,7 @@ const EventItem = ({ event }) => {
       <li>
         <h4>{event.title}</h4>
         <h3>{timeUntilEvent}</h3>
-        {event.imageUrl && <img src={event.imageUrl} alt={event.title} />}
+        {event.imageUrl && <img className="responsive-img" src={event.imageUrl} alt={event.title} />}
         <p>Data: {event.dateTxt}</p>
         <p>Horário: {event.time}</p>
         <p>{event.description}</p>
