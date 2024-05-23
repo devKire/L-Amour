@@ -117,6 +117,16 @@ const groupsListData = [
   },
 ];
 const admListData = [
+
+  {
+    bio: ". . .  The Boss . . .",
+    imageUrl: "/assets/luan.jpg",
+    alt: "Imagem do Luan",
+    discord: "luanxd8281",
+    whats: "47 9734-8584",
+    subtitle: "Luan",
+  },
+
   {
     bio: "Sou o cara que cuida das manutenções do server e principalmente do site. Mas trabalha mais do que joga, mas sempre está presente para responder as perguntas e falar com os pessoal.",
     imageUrl: "https://github.com/devKire.png",
@@ -136,21 +146,21 @@ const admListData = [
   },
 
   {
-    bio: "bio",
-    imageUrl: "/assets/luan.jpg",
-    alt: "Imagemd do Luan",
-    discord: "luanxd8281",
-    whats: "47 9734-8584",
-    subtitle: "Luan",
-  },
-
-  {
     bio: "Eu sou o FBI, se tiverem alguma dúvida ou problema, podem falar comigo, eu vou tentar resolver e dar meu máximo para ajudá-lo.☕",
     imageUrl: "/assets/fbi.jpg",
-    alt: "Imagemd do FBI",
+    alt: "Imagem do FBI",
     discord: "fbi35br",
     whats: "47 9662-4664",
     subtitle: "FBI",
+  },
+
+  {
+    bio: "Moderador do Sea of Thieves",
+    imageUrl: "https://i.pinimg.com/564x/74/86/5d/74865dcf17e7d55519ba03e197af0cbe.jpg",
+    alt: "Imagem do DiMolto",
+    discord: "di0molto",
+    whats: "47 9662-4664",
+    subtitle: "Di Molto",
   },
 ];
 
@@ -181,19 +191,36 @@ const eventListData = [
   {
     upcomingEvents: [
       {
-        title: "🪂 Jogatina no Fortnite 🪂",
+        title: "🪂 Campeonato valendo 4 passes de Batalhas ou Valor no PIX 🪂",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
-        date: "2024-05-11",
-        dateTxt: "11 de Maio de 2024 (Sábado)",
-        time: "18:00",
+        date: "2024-06-01",
+        dateTxt: "01 de Junho de 2024 (Sábado)",
+        time: "20:00",
         description:
-          "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor! 🪂",
+          "Jogo em sala personalizada em DUPLA com uma partida de Zero Build e uma de Battle Royale  (A dupla ganhadora da partida Zero Build não poderá participar da partida Battle Royale)! /////// DESAFIO X1 /////// Os finalistas de cada partida podem pedir um x1 contra os vencedores valendo os prêmios, só acontecerá caso os vencedores aceitem o desafio, será uma melhor de 10, cada dupla deverá escolher um representante para o duelo 🪂",
         instructions:
-          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas chamadas.",
+          "Para participar, entre no servidor no horário agendado com sua dupla feita e junte-se à equipe que vai estar nas chamada de eventos.",
         requirements:
           "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
+      {
+        title: "🏴‍☠ Evento Mega Aliança no Sea of Thieves! 🌊",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/490377-144x192.jpg",
+        date: "2024-05-24",
+        dateTxt: "Sexta a Segunda-feira dos dias 24 a 27 de Maio",
+        time: "20:00",
+        description:
+          "Vamos nos reunir para se divertir em uma jornada maritima nos mares do Sea of Thieves! Preparem-se para uma aventura épica em Sea of Thieves! De sexta a segunda-feira, estaremos formando uma mega aliança para enfrentar as missões dos Acumuladores de Ouro. Junte-se a nós todas as noites às 20:00 horas para navegar juntos e conquistar tesouros inimagináveis! Junte sua tripulação e venha participar da jogatina 🏴‍☠️",
+        instructions:
+          "Para participar, entre no servidor no horário agendado e junte-se ao grupo que vai estar nas chamadas.",
+        requirements:
+          "Possuir uma conta, internet estavel e algum meio para jogar Sea of Thieves: Pc, Console, Mobile(Apenas pelo Xcloud).",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+    ],
+
+    descriptionEvents: [
       {
         title: "🏴‍☠️ Jogatina no Sea of Thieves 🏴‍☠️",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/490377-144x192.jpg",
@@ -208,9 +235,20 @@ const eventListData = [
           "Possuir uma conta, internet estavel e algum meio para jogar Sea of Thieves: Pc, Console, Mobile(Apenas pelo Xcloud).",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
-    ],
-
-    descriptionEvents: [
+      {
+        title: "🪂 Jogatina no Fortnite 🪂",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        date: "2024-05-11",
+        dateTxt: "11 de Maio de 2024 (Sábado)",
+        time: "18:00",
+        description:
+          "Vamos nos reunir para se divertir em um mata-mata frenético, quanto mais participantes melhor! 🪂",
+        instructions:
+          "Para participar, entre no servidor no horário agendado e junte-se à equipe que vai estar nas chamadas.",
+        requirements:
+          "Possuir uma conta Epicgames e algum meio para jogar Fortnite: Pc, Console, Mobile.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
       {
         title: "Jogatina no Call of Duty Mobile",
         imageUrl:
@@ -228,6 +266,22 @@ const eventListData = [
       },
     ],
     pastEvents: [
+      {
+        title: "🏴‍☠️ Jogatina no Sea of Thieves 🏴‍☠️",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/490377-144x192.jpg",
+        dateTxt: "11/05/2024 (Sábado)",
+        results: ". . .",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+      {
+        title: "🪂 Jogatina no Fortnite 🪂",
+        imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
+        dateTxt: "11 de Maio de 2024 (Sábado)",
+        results: ". . .",
+        media: "Confira algumas fotos do evento em nossas redes sociais.",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
       {
         title: "Jogatina no Fortnite",
         imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/33214-144x192.jpg",
@@ -300,7 +354,7 @@ function App() {
           }
         </Section>
         <Section
-          title="Adm's do Server"
+          title="Adm's e Moderadores do Server"
           subtitle="Os caras que fazem tudo acontecer, e que você pode ir conversar caso tenha alguma duvida, dica ou denúncia."
           className="adms-list"
         >
@@ -315,6 +369,30 @@ function App() {
           ))}
         </Section>
 
+        <Section
+          title="Eventos"
+          subtitle="Os eventos que estamos fazendo agora no servidor:"
+          className="events-list"
+        >
+          {eventListData.map(function (item) {
+            return <UpcomingEvents upcomingEvents={item.upcomingEvents} />;
+          })}
+        </Section>
+        <Section
+          title="Redes Sociais"
+          subtitle="Se conecta com a gente!"
+          className="social-list"
+        >
+          {socialListData.map(function (item) {
+            return (
+              <ListItem
+                url={item.url}
+                imageUrl={item.imageUrl}
+                alt={item.alt}
+              />
+            );
+          })}
+        </Section>
         <Section
           title="Grupos do Whatsapp"
           subtitle="Para os que querem jogar apenas um tipo de jogo ou conhecer jogos novos!"
@@ -333,15 +411,7 @@ function App() {
             })}
           </div>
         </Section>
-        <Section
-          title="Eventos"
-          subtitle="Os eventos que estamos fazendo agora no servidor:"
-          className="events-list"
-        >
-          {eventListData.map(function (item) {
-            return <UpcomingEvents upcomingEvents={item.upcomingEvents} />;
-          })}
-        </Section>
+
         <Section
           title="Eventos Passados:"
           subtitle="Os resultados, fotos e outras informações vão estar nas nossas redes sociais:"
@@ -352,21 +422,6 @@ function App() {
           })}
         </Section>
 
-        <Section
-          title="Redes Sociais"
-          subtitle="Se conecta com a gente!"
-          className="social-list"
-        >
-          {socialListData.map(function (item) {
-            return (
-              <ListItem
-                url={item.url}
-                imageUrl={item.imageUrl}
-                alt={item.alt}
-              />
-            );
-          })}
-        </Section>
       </main>
       {selectedAdmin && (
         <AdminModal
