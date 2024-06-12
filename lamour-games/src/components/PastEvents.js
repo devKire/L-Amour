@@ -32,7 +32,7 @@ export default function PastEvents({ pastEvents }) {
           <p>Data: {selectedEvent.dateTxt}</p>
           <p>Resultados: {selectedEvent.results}</p>
           <p>{selectedEvent.media}</p>
-          {selectedEvent.imageUrl && <img src={selectedEvent.imageUrl} alt={selectedEvent.title} />}
+          {selectedEvent.imageUrl && <img className="responsive-img" src={selectedEvent.imageUrl} alt={selectedEvent.title} />}
           <a target="_blank" href={selectedEvent.buttonUrl}>
             Ver resultados
           </a>

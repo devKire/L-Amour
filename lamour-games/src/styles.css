@@ -127,47 +127,40 @@ section ul li:hover {
     border: 1px solid #443E54;
 }
 
-/* General styling for the groups list */
-.groups-list {
+.novidades-list {
     text-align: center;
     margin-top: 50px;
 }
 
-/* Styling for each group item */
-.groups-list a {
+.novidades-list a {
     display: inline-block;
     color: #fff;
-    background-image: linear-gradient(90deg, #0f8509 0%, #00ff48 50.52%, #60eaac 100%);
     padding: 4px;
     margin: 20px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
 
-/* Styling for the image within each group item */
-.groups-list img {
-    width: 100px;
-    border-radius: 10%;
-    margin: 10px;
-    vertical-align: middle;
+.novidades-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
 
-/* Styling for the text container within each group item */
 .groups-list a div {
     background-color: rgb(32, 32, 32);
     padding: 10px;
     border-radius: 8px;
 }
 
-/* Styling for the heading within each group item */
-.groups-list a h3 {
+.novidades-list a h3 {
     letter-spacing: -0.47px;
     text-align: center;
     margin-top: 0; /* Reset margin top */
 }   
 
-/* Hover effect for each group item */
-.groups-list a:hover {
+.novidades-list a:hover {
     transform: scale(1.04);
 }
 
@@ -250,7 +243,16 @@ section ul li:hover {
     background: linear-gradient(to right, #FF4B2B, #FF416C);
     transform: scale(1.1);
   }
+
+/* CORES PARA OS TEXTOS DE EVENTO EM ANDAMENTO, TERMINADO, ETC*/
+
+.evento-terminado {
+    color: red;
+  }
   
+  .evento-em-andamento {
+    color: green;
+  }
 
 /* animation */
 
@@ -384,9 +386,10 @@ iframe {
   }
 }
 
-  .responsive-img {
-    width: 100%;
+.responsive-img {
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
-  }
+    display: block;
+}
   
