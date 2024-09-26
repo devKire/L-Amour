@@ -52,6 +52,18 @@ const eventListData = [
 
     descriptionEvents: [
       {
+        title: "🎮🎮 JOGO LIVRE 🎮🎮",
+        imageUrl: "https://i.ytimg.com/vi/7V5jdOjWVU4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCLmAxRosK3Ltbar9OdDhUHFuDug",
+        date: "2024-08-03",
+        dateTxt: "Sábado dia 3",
+        time: "17:00",
+        description:
+          "Jogo Livre com todos os administradores no discord!",
+        instructions: `Entrar na 🔊¶ 🛡sala de eventos🛡 no canal 🎮🎮 JOGOS GERAIS🎮🎮`,
+        requirements: `Ser membro do discord da L'Amour`,
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+      {
         title: "REALM DA L'AMOUR NO MINECRAFT",
         imageUrl: "/assets/divulgaçãoRealmMinecraft.jpg",
         date: "2024-06-08",
@@ -123,10 +135,17 @@ const eventListData = [
     ],
     pastEvents: [
       {
+        title: "🎮🎮 JOGO LIVRE 🎮🎮",
+        imageUrl: "https://i.ytimg.com/vi/7V5jdOjWVU4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCLmAxRosK3Ltbar9OdDhUHFuDug",
+        date: "2024-08-03",
+        dateTxt: "Dia 8 de Agosto de 2024",
+        buttonUrl: "https://discord.gg/wkczEEUnDX",
+      },
+      {
         title: "REALM DA L'AMOUR NO MINECRAFT",
         imageUrl: "/assets/divulgaçãoRealmMinecraft.jpg",
         date: "2024-06-08",
-        dateTxt: "Dia 06 de Junho",
+        dateTxt: "Dia 06 de Junho de 2024",
         results: ". . .",
         buttonUrl: "https://discord.gg/wkczEEUnDX",
       },
@@ -308,7 +327,7 @@ const admListData = [
   {
     bio: "Agente secreto da Sombra, fale comigo sobre Fortnite, tire dúvidas, dicas de xp e novidades",
     imageUrl:
-      "https://pbs.twimg.com/profile_images/1771298088088399872/gidKe1j7_400x400.jpg",
+      "https://i.pinimg.com/564x/55/fd/bc/55fdbc39c7c5107f9125bf8173e73caa.jpg",
     alt: "Imagem do MD",
     discord: "mdthenitemare",
     whats: "11 99457-3760",
@@ -341,6 +360,11 @@ const socialListData = [
     url: "https://www.twitch.tv/lamourgames",
     imageUrl: "/assets/twitch.svg",
     alt: "Twich da L'Amour Games",
+  },
+  {
+    url: "https://www.youtube.com/channel/UCf0XoICr60ldIbGi53cldNQ",
+    imageUrl: "/assets/youtube.svg",
+    alt: "YouTube da L'Amour Games",
   },
 ];
 
