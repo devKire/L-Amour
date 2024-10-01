@@ -3,11 +3,55 @@ import { Link } from "react-router-dom";
 import { routes } from "../router/routes";
 import Header from "../components/Header";
 import Section from "../components/Section";
+import AdminModal from "../components/AdminModal";
+import ListItemAdmin from "../components/ListItemAdmin";
+import { useState } from "react";
 
-function About() {
+const admListData = [
+  {
+    bio: "Sou o cara que cuida das manutenções do server e principalmente do site. Mas trabalha mais do que joga, mas sempre está presente para responder as perguntas e falar com os pessoal.",
+    imageUrl: "https://github.com/devKire.png",
+    alt: "Imagem do Kire",
+    discord: "kire_k",
+    whats: "47 99924-8948",
+    subtitle: "Kire",
+  },
+
+  {
+    bio: "Eu sou o FBI, se tiverem alguma dúvida ou problema, podem falar comigo, eu vou tentar resolver e dar meu máximo para ajudá-lo.☕",
+    imageUrl: "/assets/fbi.jpg",
+    alt: "Imagem do FBI",
+    discord: "fbi35br",
+    whats: "47 9662-4664",
+    subtitle: "FBI",
+  },
+
+  {
+    bio: "Olá! Aqui é o Di Molto, conhecido como DiMota pelos mais íntimos. Caso queira tirar dúvidas ou até mesmo jogar, só me chamar. Estarei à disposição. 😎👍",
+    imageUrl:
+      "https://i.pinimg.com/564x/74/86/5d/74865dcf17e7d55519ba03e197af0cbe.jpg",
+    alt: "Imagem do DiMolto",
+    discord: "di0molto",
+    whats: "34 9197-3964",
+    subtitle: "Di Molto",
+  },
+  {
+    bio: "Agente secreto da Sombra, fale comigo sobre Fortnite, tire dúvidas, dicas de xp e novidades",
+    imageUrl:
+      "https://i.pinimg.com/564x/55/fd/bc/55fdbc39c7c5107f9125bf8173e73caa.jpg",
+    alt: "Imagem do MD",
+    discord: "mdthenitemare",
+    whats: "11 99457-3760",
+    subtitle: "MD",
+  },
+];
+
+
+function AboutPage() {
+  const [selectedAdmin, setSelectedAdmin] = useState(null);
   return (
     <div className="about-container">
-      <Link to={routes.home} type="button"><Header /></Link>
+      <Header />
       <main className="about-content">
         
         <Section
@@ -19,6 +63,22 @@ function About() {
             </p>
         </Section>
         
+        <Section
+          title="Adm's e Moderadores do Server"
+          subtitle="Os caras que fazem tudo acontecer, e que você pode ir conversar caso tenha alguma duvida, dica ou denúncia."
+          className="adms-list"
+        >
+          {admListData.map((admin) => (
+            <ListItemAdmin
+              key={admin.subtitle}
+              adminData={admin}
+              imageUrl={admin.imageUrl}
+              subtitle={admin.subtitle}
+              onClick={() => setSelectedAdmin(admin)}
+            />
+          ))}
+        </Section>
+
         <Section
           title="🎮 Eventos e Torneios"
           subtitle=""
@@ -62,8 +122,14 @@ function About() {
         </Section>
 
       </main>
+      {selectedAdmin && (
+        <AdminModal
+          admin={selectedAdmin}
+          onClose={() => setSelectedAdmin(null)}
+        />
+      )}
     </div>
   );
 }
 
-export default About;
+export default AboutPage;
