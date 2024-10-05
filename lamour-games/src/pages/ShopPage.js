@@ -1,19 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-
-// Sample product data (or fetch from API)
-const initialProducts = [
-  { id: 1, name: "Gift Card Play Store", type: "GiftCard", subcategory: "Google Play", image: "url_do_gif", price: "$2.99" },
-  { id: 2, name: "Game 1", type: "Game", subcategory: "Ação", image: "url_do_jogo", price: "$29.99" },
-  { id: 3, name: "Gamepass", type: "Subscription", subcategory: "Xbox", image: "https://cdn.sistemawbuy.com.br/arquivos/b7f36453f415a540dffee82d02b0ae0c/produtos/6468c308af8ff/gamepass-ultimate-6468c3095ca29.jpg", price: "$9.99" },
-  { id: 4, name: "Spotify Premium", type: "Subscription", subcategory: "Música", image: "https://products.eneba.games/resized-products/sQhfdOKr8vNAQVGQD9WITrefNUszi4Ajkb1NPl0MTkg_1920x1080_1x-0.jpeg", price: "$29.99" },
-  { id: 5, name: "PlayPlus", type: "Subscription", subcategory: "Streaming", image: "url_da_assinatura", price: "$829.99" },
-  { id: 6, name: "Gift Card Steam", type: "GiftCard", subcategory: "Steam", image: "url_do_gif", price: "$9929.99" },
-  { id: 7, name: "Game 2", type: "Game", subcategory: "RPG", image: "url_do_jogo", price: "$29.99" },
-  { id: 8, name: "Playstation Plus", type: "Subscription", subcategory: "Playstation", image: "url_da_assinatura", price: "$289.99" },
-  { id: 9, name: "Netflix", type: "Subscription", subcategory: "Streaming", image: "url_da_assinatura", price: "$29.99" },
-  { id: 10, name: "Youtube Music Premium", type: "Subscription", subcategory: "Música", image: "url_da_assinatura", price: "$9.99" },
-];
+import { db } from '../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 const ProductList = ({ products }) => (
   <div className="products-list">
@@ -21,7 +9,7 @@ const ProductList = ({ products }) => (
       <div key={product.id} className="product-item">
         <img src={product.image} alt={product.name} />
         <h3>{product.name}</h3>
-        <p>{product.price}</p>
+        <p>R${product.price}</p>
       </div>
     ))}
   </div>
@@ -45,16 +33,31 @@ const useDebounce = (value, delay) => {
 };
 
 function ShopPage() {
-  const [products] = useState(initialProducts);
+  const [products, setProducts] = useState([]); // Inicializar como um array vazio
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState(null);
-  const [sortBy, setSortBy] = useState("name"); // Add state for sorting
-  const [sortOrder, setSortOrder] = useState("asc"); // Add state for sorting order
+  const [sortBy, setSortBy] = useState("name");
+  const [sortOrder, setSortOrder] = useState("asc");
 
   // Debounced search term
-  const debouncedSearchTerm = useDebounce(searchTerm, 300); // 300ms debounce
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+
+  // Fetch products from Firestore on mount
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const productsCollection = collection(db, "products"); // Nome da coleção
+      const productsSnapshot = await getDocs(productsCollection);
+      const productsList = productsSnapshot.docs.map(doc => ({
+        id: doc.id, // A ID do documento
+        ...doc.data(), // Os dados do documento
+      }));
+      setProducts(productsList);
+    };
+
+    fetchProducts();
+  }, []); // Dependência vazia para rodar apenas uma vez ao montar
 
   // Derived state for filtering
   const filteredProducts = products.filter(product => {
@@ -107,8 +110,8 @@ function ShopPage() {
     setSelectedTypes([]);
     setSelectedSubcategories([]);
     setActiveCategory(null);
-    setSortBy("name"); // Reset sorting to default
-    setSortOrder("asc"); // Reset sorting order to ascending
+    setSortBy("name");
+    setSortOrder("asc");
   };
 
   return (
@@ -139,7 +142,7 @@ function ShopPage() {
               onChange={(e) => toggleType(e.target.value)} 
               className="category-select"
             >
-              <option value="">Select a category</option> {/* Placeholder for dropdown */}
+              <option value="">Select a category</option>
               {types.map(type => (
                 <option key={type} value={type}>
                   {type}
