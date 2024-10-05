@@ -43,13 +43,10 @@ header {
 header div {
     width: 120px;
     margin: auto;
-    background-image: linear-gradient(90deg, #4915e8 0%, #14c9e1 50.52%, #8eefc0 100%);
-
+    background-image: linear-gradient(to right, #FF416C, #FF4B2B);
     border-radius: 50%;
-
     display: flex;
     padding: 4px;
-
     transition: transform .3s;
 }
 
@@ -80,18 +77,15 @@ section {
     border-radius: 10px;
 }
 
-section div {
-    background-color: rgba(63, 61, 66, 0.7); /* Cor de fundo com transparência */
+section > div { /*section > div, garante que apenas os div que são filhos diretos de section sejam afetados pelos estilos.*/
+    background-color: rgba(63, 61, 66, 0.7); 
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
     backdrop-filter: blur(10px); /* Adiciona desfoque ao fundo */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   }
   
-section  h1 {
-    color: red;
-}
 
 section h2 {
     letter-spacing: -0.47px;
@@ -103,7 +97,7 @@ section h2 {
  }
 section p {
     letter-spacing: -0.18px;
-    color: #A1A1AA;
+    color: #d1d1d1;
 }
 
 section ul {
@@ -326,34 +320,50 @@ main section:nth-child(3) {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo semi-transparente */
-  display: flex;            /* Usa flexbox para centralizar */
-  justify-content: center;  /* Centraliza horizontalmente */
-  align-items: center;      /* Centraliza verticalmente */
-  z-index: 1000;            /* Z-index alto para ficar acima dos outros elementos */
-}
-
-/* Estilos para o conteúdo do modal */
-.modalV {
-  position: relative;
-  z-index: 1010;            /* Z-index para ficar acima do overlay */
-  overflow: hidden;
-  width: 80%;                /* Largura ajustável */
-  height: 80%;               /* Altura ajustável */
-  max-width: 90%;            /* Largura máxima */
-  max-height: 90%;           /* Altura máxima */
-  display: flex;             /* Usa flexbox para centralizar */
-  justify-content: center;   /* Centraliza horizontalmente */
-  align-items: center;       /* Centraliza verticalmente */
+  display: flex;            
+  justify-content: center;  
+  align-items: center;     
+  z-index: 1020;
 }
 
 .modalAdm {
-    background: linear-gradient(to right, #FF416C, #FF4B2B);
-    padding: 4px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 80%;
-  }
+  background: linear-gradient(to right, #FF416C, #FF4B2B); /* Gradiente moderno */
+  padding: 4px;               /* Aumenta o padding para mais espaço */
+  border-radius: 12px;          /* Borda arredondada mais suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais acentuada para destaque */
+  max-width: 90%;               /* Ligeiramente maior, mantendo responsividade */
+  width: 100%;
+  margin: 0 auto;               /* Centraliza o modal horizontalmente */
+  position: relative;           /* Permite posicionamento de elementos internos */
+  overflow: hidden;             /* Garante que o conteúdo interno não ultrapasse */
+  z-index: 1020;
+}
+
+.admin-bio {
+  background-color: rgba(18, 18, 20, 0.9);
+  padding: 24px;
+  border-radius: 8px;          
+  backdrop-filter: blur(8px);    
+  color: white;                  
+}  
+
+.admin-gif {
+  position: absolute;     /* Posicionamento relativo ao pai (.modalAdm) */
+  bottom: 4px;            /* Distância de 4px da borda inferior */
+  right: 16px;             /* Distância de 4px da borda direita */
+  width: 150px;           /* Aumenta a largura do GIF */
+  height: auto;          /* Define altura proporcional */
+  z-index: 1;             /* Garante que o GIF fique acima do conteúdo da bio */
+}
+
+.admin-gif img {
+  width: 100%;            /* Garante que o GIF ocupe o espaço do contêiner .admin-gif */
+  height: 100%;           /* Mantém o GIF dentro das proporções do contêiner */
+  border-radius: 8px;     /* Borda arredondada no GIF */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o GIF */
+}
+
+
 /* Botão de fechar do modal */
 .close-button {
   position: absolute;        /* Posição absoluta em relação ao modal */
@@ -363,7 +373,7 @@ main section:nth-child(3) {
   background: linear-gradient(to right, #FF416C, #FF4B2B);
   color: #ffffff;            /* Cor do texto */
   border: none;
-  z-index: 1020;             /* Z-index para ficar acima dos outros elementos */
+  z-index: 1002;             /* Z-index para ficar acima dos outros elementos */
   border-radius: 4px;        /* Borda arredondada */
   cursor: pointer;
   font-size: 16px;
@@ -409,7 +419,7 @@ iframe {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1002;
 }
 
 .hamburger div {
@@ -421,6 +431,7 @@ iframe {
 }
 
 /* Menu escondido inicialmente */
+
 nav {
   display: none;
   position: absolute;
@@ -432,6 +443,7 @@ nav {
   color: white;
   padding: 20px;
   box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
 }
 
 /* Exibir o menu ao clicar no botão */
@@ -458,6 +470,225 @@ nav ul li a {
   font-size: 18px;
 }
 
+.shop-content {
+  padding: 20px;
+}
+
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Altere o tamanho mínimo conforme necessário */
+  gap: 16px;
+}
+
+.product-item {
+  background-color: rgba(63, 61, 66, 0.7); 
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  backdrop-filter: blur(10px); 
+}
+
+.product-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.product-item h3 {
+  margin: 10px 0 5px;
+  color: white;
+}
+
+.product-item p {
+  color: #d1d1d1;
+}
+
+.product-item:hover {
+  background-color: #494949;
+  transform: scale(1.05);
+}
+
+/* General Styles for Filter Container */
+.filter-container {
+  background-color: rgba(63, 61, 66, 0.7); 
+  padding: 20px;                      
+  border-radius: 8px;       
+  backdrop-filter: blur(10px);           
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Search Filter Styles */
+.search-filter {
+  margin-bottom: 15px;                /* Space below search bar */
+}
+
+.search-filter input {
+  width: 100%;                        /* Full width for input */
+  padding: 10px;                     /* Padding for comfort */
+  border: none;                      /* No border */
+  border-radius: 5px;                /* Rounded corners */
+  background-color: #333;            /* Dark background for input */
+  color: #fff;                       /* White text */
+  font-size: 16px;                   /* Font size */
+}
+
+.search-filter input::placeholder {
+  color: #aaa;                       /* Placeholder text color */
+}
+
+.sorting-filter {
+  display: flex;                         /* Use flexbox for horizontal alignment */
+  align-items: center;                  /* Center align items vertically */
+  margin-bottom: 20px;                  /* Space below the filter */
+}
+
+.sorting-filter select {
+  padding: 10px 15px;                   /* Padding for select element */
+  background-color: #444;               /* Dark background color */
+  border: 1px solid #666;               /* Light border for contrast */
+  border-radius: 5px;                   /* Rounded corners */
+  color: #fff;                          /* White text color */
+  font-size: 16px;                      /* Font size */
+  cursor: pointer;                       /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Transition for effects */
+}
+
+.sorting-filter select:hover {
+  background-color: #555;               /* Slightly lighter on hover */
+  border-color: #FF4B2B;                /* Change border color on hover */
+}
+
+.sorting-filter button {
+  padding: 10px 15px;                   /* Padding for button */
+  background-color: #FF4B2B;            /* Button background color */
+  color: #fff;                          /* Button text color */
+  border: none;                         /* Remove border */
+  border-radius: 5px;                   /* Rounded corners */
+  font-size: 16px;                      /* Font size */
+  cursor: pointer;                       /* Pointer cursor */
+  margin-left: 10px;                    /* Space between select and button */
+  transition: background-color 0.3s;    /* Transition for hover effects */
+}
+
+.sorting-filter button:hover {
+  background-color: #FF416C;            /* Lighter red on hover */
+}
+
+/* Optional: Focus styles for accessibility */
+.sorting-filter select:focus,
+.sorting-filter button:focus {
+  outline: 2px solid #FF4B2B;           /* Outline on focus */
+  outline-offset: 2px;                   /* Offset outline */
+}
+
+/* Category Filter Styles */
+.category-filter {
+  display: flex;                     /* Flexbox for layout */
+  flex-direction: column;            /* Vertical alignment */
+}
+
+.category-filter ul {
+  list-style-type: none;             /* No bullets for list */
+  padding: 0;                        /* No padding */
+}
+
+.category-filter li {
+  margin-bottom: 10px;               /* Space between categories */
+}
+
+/* Category Button Styles */
+.category-select {
+  display: block;                     
+  padding: 12px 15px;            
+  background-color: #444;           
+  border: none;                      
+  border-radius: 5px;              
+  color: #fff;                    
+  font-size: 16px;                 
+  font-weight: 600; /* Optional: Change font weight */
+  cursor: pointer;                   
+  transition: background-color 0.3s; 
+}
+
+/* Active Category Button */
+.category-select.active {
+  background: linear-gradient(to right, #FF416C, #FF4B2B);      
+  animation: pulse 1s infinite; 
+}
+
+/* Hover Effect for Buttons */
+.category-select:hover {
+  background: linear-gradient(to right, #FF4B2B, #FF416C); /* Gradient on hover */
+}
+
+/* Focus Style for Accessibility */
+.category-select:focus {
+  outline: 2px solid #FF4B2B; 
+  outline-offset: 2px; 
+}
+
+
+/* Subcategory Dropdown Styles */
+.subcategory-dropdown {
+  padding-left: 15px;                /* Indent nested list */
+  margin-top: 8px;                   /* Space above dropdown */
+  background-color: #333;            /* Dark background for dropdown */
+  border-radius: 5px;                /* Rounded corners */
+}
+
+/* Checkbox Label Styles */
+.subcategory-dropdown label {
+  cursor: pointer;                   /* Pointer cursor for checkboxes */
+  display: flex;                     /* Flex for layout */
+  align-items: center;               /* Center align items */
+  padding: 8px 10px;                 /* Padding for comfort */
+  color: #fff;                       /* White text */
+  transition: background-color 0.2s; /* Smooth background change */
+}
+
+/* Hover Effect for Checkbox Labels */
+.subcategory-dropdown label:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+/* Reset Button Styles */
+.reset-button {
+  margin-top: 15px;                 /* Space above reset button */
+  padding: 10px 15px;               /* Padding for comfort */
+  background-color: #ff4444;        /* Red background for reset */
+  border: none;                     /* No border */
+  border-radius: 5px;               /* Rounded corners */
+  color: #fff;                      /* White text */
+  cursor: pointer;                  /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Hover Effect for Reset Button */
+.reset-button:hover {
+  background-color: #cc0000;        /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-container {
+    padding: 15px;              /* Reduce padding on smaller screens */
+  }
+  
+  .search-filter input {
+    font-size: 14px;           /* Decrease font size on smaller screens */
+  }
+  
+  .category-filter label,
+  .subcategory-filter label {
+    font-size: 14px;           /* Decrease font size */
+  }
+  
+  button {
+    font-size: 14px;           /* Decrease font size */
+  }
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   .hamburger {
@@ -469,12 +700,24 @@ nav ul li a {
     height: 2px;
   }
 
+  .admin-gif {
+    position: static; 
+    width: 150px;           
+    margin: 16px auto 0;   
+  }
   nav {
     width: 100%;
     height: auto;
     top: 50px;
     right: 0;
   }
- 
+  
+  .games-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Menor espaçamento para dispositivos menores */
+  }
+
+  .game-item {
+    padding: 8px; /* Menor padding em dispositivos menores */
+  }
 }
   
