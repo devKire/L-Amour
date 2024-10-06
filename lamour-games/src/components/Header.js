@@ -8,23 +8,23 @@ export default function Header() {
 
   return (
     <header>
-        <div>
+      <div>
           <img src="/assets/logo.png" alt="Logo da L'AMour Games" />
         </div>
 
       <h1>L'Amour Games</h1>
-
-      <input
-        type="checkbox"
+      <button
         id="menu-toggle"
-        checked={isMenuOpen}
-        onChange={() => setIsMenuOpen(!isMenuOpen)}
-      />
-      <label className="hamburger" htmlFor="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </label>
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-expanded={isMenuOpen} // Acessibilidade
+        aria-label="Toggle menu" // Acessibilidade
+      >
+        <span className="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </span>
+      </button>
 
       <nav className={isMenuOpen ? "menu-open" : ""}>
         <ul>
@@ -32,7 +32,7 @@ export default function Header() {
             <Link to={routes.home}>Home</Link>
           </li>
           <li>
-          <Link to={routes.shop}>Loja</Link>
+            <Link to={routes.shop}>Loja</Link>
           </li>
           <li>
             <Link to={routes.about}>Sobre</Link>

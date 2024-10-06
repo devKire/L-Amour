@@ -4,7 +4,6 @@ import Section from "../components/Section";
 import ListItem from "../components/ListItem";
 import UpcomingEvents from "../components/UpcomingEvents";
 import PastEvents from "../components/PastEvents";
-import Modal from "../components/Modal";
 import ListItem02 from "../components/ListItem02";
 import { Link } from "react-router-dom";
 import { routes } from "../router/routes";
