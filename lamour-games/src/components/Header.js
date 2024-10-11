@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
 import { routes } from "../router/routes";
 import { useState } from "react";
-
+import { auth } from "../firebase-config"; 
 export default function Header() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Verifica se o usuário está autenticado
+  const user = auth.currentUser;
 
   return (
     <header>
-      <div>
-          <img src="/assets/logo.png" alt="Logo da L'AMour Games" />
-        </div>
+      <div className="logolamour">
+        <img src="/assets/logo.png" alt="Logo da L'Amour Games" />
+      </div>
 
       <h1>L'Amour Games</h1>
       <button
         id="menu-toggle"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-expanded={isMenuOpen} // Acessibilidade
-        aria-label="Toggle menu" // Acessibilidade
+        aria-expanded={isMenuOpen} 
+        aria-label="Toggle menu" 
       >
         <span className="hamburger">
           <div></div>
@@ -40,6 +42,21 @@ export default function Header() {
           <li>
             <Link to={routes.contact}>Contato</Link>
           </li>
+          {/* Exibe o botão de Perfil ou os botões de Login e Signup */}
+          {user ? (
+            <li>
+              <Link to={routes.userProfile}>Perfil</Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to={routes.login}>Login</Link>
+              </li>
+              <li>
+                <Link to={routes.signup}>Signup</Link>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </header>

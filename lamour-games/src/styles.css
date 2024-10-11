@@ -42,7 +42,7 @@ header {
   text-align: center;
 }
 
-header div {
+.logolamour {
   width: 120px;
   margin: auto;
   background-image: linear-gradient(to right, #FF416C, #FF4B2B);
@@ -52,12 +52,11 @@ header div {
   transition: transform .3s;
 }
 
-
-header div:hover {
+.logolamour:hover {
   transform: scale(1.1)
 }
 
-header div img {
+.logolamour img {
   width: 100%;
   border-radius: 50%;
 }
@@ -1283,8 +1282,7 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-.category-select:hover,
-.gradient {
+.category-select:hover {
   background-color: #555;
   border-color: #FF4B2B;
 }
@@ -1427,4 +1425,288 @@ nav ul li a:hover {
     font-size: 12px;
     /* Adjust font size for small screens */
   }
+}
+
+/* Estilos gerais para o container da página */
+.ls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #121214;
+}
+
+/* Estilos para o formulário */
+.form-ls {
+  background: #1e1e1e; /* Fundo do formulário */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Largura máxima do formulário */
+}
+
+/* Estilos para o título do formulário */
+.ls-container h1 {
+  color: #ffffff; /* Cor do texto */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para os inputs */
+.form-floating {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: #ffffff; /* Fundo dos inputs */
+  border: 1px solid #444; /* Borda dos inputs */
+  border-radius: 5px;
+  color: #000000; /* Cor do texto dos inputs */
+  padding: 12px 15px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #000000; /* Cor da borda ao focar */
+  outline: none;
+}
+
+.ls-container label {
+  color: #a0a0a0; /* Cor do texto do label */
+}
+
+/* Estilos para a mensagem de erro */
+.ls-container p {
+  color: red; /* Cor da mensagem de erro */
+  text-align: center;
+}
+
+/* Estilos para a checkbox */
+.form-check {
+  color: #000000; /* Cor do texto da checkbox */
+}
+
+/* Estilos para os botões */
+.ls-button {
+  color: #ffffff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para o link */
+.ls-container a {
+  text-decoration: none;
+}
+
+.invalid-feedback {
+  color: #ff2600;
+}
+.ls-container a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: WHITE;
+  background-image: none;
+  border: 1px solid #747775;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+  margin: 10px auto; 
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.gsi-material-button .gsi-material-button-state {
+  -webkit-transition: opacity .218s;
+  transition: opacity .218s;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff61;
+  border-color: #1f1f1f1f;
+}
+
+.gsi-material-button:disabled .gsi-material-button-contents {
+  opacity: 38%;
+}
+
+.gsi-material-button:disabled .gsi-material-button-icon {
+  opacity: 38%;
+}
+
+.gsi-material-button:not(:disabled):active .gsi-material-button-state, 
+.gsi-material-button:not(:disabled):focus .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 12%;
+}
+
+.gsi-material-button:not(:disabled):hover {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+}
+
+.gsi-material-button:not(:disabled):hover .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 8%;
+}
+
+.gsi-material-button:hover {
+  transform: scale(1.1)
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  /* Transparent white background */
+  border-radius: 20px;
+  /* Adjust border radius as needed */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Transparent white border */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* Glass shadow */
+  backdrop-filter: blur(10px);
+  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* Blur effect for older browsers */
+}
+
+.user-profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.user-profile-container img {
+  border: 2px solid #ff5500; /* Borda azul suave na imagem */
+  width: 120px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform .3s;
+}
+
+.user-profile-container p {
+  margin: 10px 0;
+  font-size: 14px; /* Tamanho de fonte ajustado para um visual clean */
+}
+
+.user-profile-container input[type="text"],
+.user-profile-container input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Fundo claro */
+  color: #333; /* Texto escuro */
+  transition: border-color 0.3s;
+}
+
+.user-profile-container input[type="text"]:focus {
+  border-color: #ff5500; /* Borda azul ao focar no input */
+  outline: none; /* Remove o outline padrão */
+}
+
+.user-profile-container button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ff5500; /* Azul para os botões */
+  color: #ffffff; /* Texto branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Tamanho de fonte ajustado */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.user-profile-container button:hover {
+  background-color: #934407; /* Azul mais escuro ao passar o mouse */
+  transform: scale(1.02); /* Leve efeito de zoom no hover */
+}
+
+.text-danger {
+  color: #ff4d4d; /* Vermelho para mensagens de erro */
+  text-align: center;
+  font-size: 14px; /* Tamanho de fonte ajustado */
+}
+
+.text-success {
+  color: #28a745; /* Verde para mensagens de sucesso */
+  text-align: center;
+  font-size: 14px; /* Tamanho de fonte ajustado */
 }

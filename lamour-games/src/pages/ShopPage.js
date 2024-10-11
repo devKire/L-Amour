@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import ProductModal from "../components/ProductModal";
-import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { fetchProducts } from "../firebase-config"; 
 
 const ProductList = ({ products, onProductClick }) => (
   <div className="products-list">
     {products.map((product) => {
-      // Ensure original price is a number
       const originalPrice = Number(product.price);
-      const salePercentage = product.sale ? parseFloat(product.sale) : 0; // Convert the sale to a number
+      const salePercentage = product.sale ? parseFloat(product.sale) : 0; 
       const discountedPrice =
         salePercentage > 0
           ? originalPrice * (1 - salePercentage / 100)
@@ -31,7 +29,6 @@ const ProductList = ({ products, onProductClick }) => (
   </div>
 );
 
-// Debounce function to limit the frequency of a function call
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
@@ -65,25 +62,17 @@ function ShopPage() {
 
   const [showFilters, setShowFilters] = useState(false);
 
-  // Debounced search term
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
-  // Fetch products from Firestore on mount
   useEffect(() => {
-    const fetchProducts = async () => {
-      const productsCollection = collection(db, "products");
-      const productsSnapshot = await getDocs(productsCollection);
-      const productsList = productsSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+    const loadProducts = async () => {
+      const productsList = await fetchProducts(); 
       setProducts(productsList);
     };
 
-    fetchProducts();
-  }, []); // Dependência vazia para rodar apenas uma vez ao montar
+    loadProducts();
+  }, []);
 
-  // Derived state for filtering
   const filteredProducts = products.filter((product) => {
     const productPrice = parseFloat(product.price.replace("R$", ""));
     const matchesSearch = product.name
@@ -111,7 +100,6 @@ function ShopPage() {
     );
   });
 
-  // Sort filtered products based on the selected criteria and order
   const sortedProducts = filteredProducts.sort((a, b) => {
     let comparison = 0;
     if (sortBy === "name") {
@@ -124,10 +112,8 @@ function ShopPage() {
     return sortOrder === "asc" ? comparison : -comparison;
   });
 
-  // Unique types and subcategories
   const types = [...new Set(products.map((product) => product.type))];
 
-  // Filter subcategories based on the active category
   const subcategories = activeCategory
     ? [
         ...new Set(
@@ -138,18 +124,15 @@ function ShopPage() {
       ]
     : [];
 
-  // Toggle selected types
   const toggleType = (type) => {
     if (selectedTypes.includes(type)) {
       setSelectedTypes(selectedTypes.filter((t) => t !== type));
     } else {
       setSelectedTypes([...selectedTypes, type]);
-      // Define o activeCategory como o último tipo selecionado
       setActiveCategory(type);
     }
   };
 
-  // Toggle selected subcategory
   const toggleSubcategory = (subcategory) => {
     if (selectedSubcategories.includes(subcategory)) {
       setSelectedSubcategories(
@@ -160,7 +143,6 @@ function ShopPage() {
     }
   };
 
-  // Reset filters
   const resetFilters = () => {
     setSearchTerm("");
     setSelectedTypes([]);
@@ -272,8 +254,8 @@ function ShopPage() {
                       <li key={sub} className="subcategory-item">
                         <input
                           type="checkbox"
-                          id={`subcategory-${sub}`} // Um ID único para cada checkbox
-                          className="custom-checkbox" // Mantendo a mesma classe
+                          id={`subcategory-${sub}`} 
+                          className="custom-checkbox" 
                           checked={selectedSubcategories.includes(sub)}
                           onChange={() => toggleSubcategory(sub)}
                         />
