@@ -20,7 +20,7 @@ const admListData = [
 
   {
     bio: "Eu sou o FBI, se tiverem alguma dúvida ou problema, podem falar comigo, eu vou tentar resolver e dar meu máximo para ajudá-lo.☕",
-    imageUrl: "/assets/fbi.jpg",
+    imageUrl: "https://i.ibb.co/7gZsqzL/image.png",
     alt: "Imagem do FBI",
     discord: "fbi35br",
     whats: "47 9662-4664",
@@ -47,6 +47,25 @@ const admListData = [
     whats: "11 99457-3760",
     subtitle: "MD",
     gif: "https://www.icegif.com/wp-content/uploads/2021/11/icegif-741.gif",
+  },
+  {
+    bio: "🥀 apenas existindo 🥀",
+    imageUrl: "https://lh3.googleusercontent.com/pw/AP1GczOWJz4_9-SPZkXFtuc0Y9BWHO3WG6vFvoh_zVXJAehDDQW7gLKnIV70DR5x6u8BZ_WuIG9y71oAOWyE9A0d2BjDuTy06k_KZANcC1SFpf10K3J_YBUBst6cR0HFj8t5PQiLHukmxaG6anvZRPlFibUe=w500-h500-s-no-gm?authuser=0",
+    alt: "Imagem do Kaukau",
+    discord: "kakau_0",
+    whats: "47 97400-6692",
+    subtitle: "Kaukau",
+    gif: "https://i.pinimg.com/originals/e6/cc/b9/e6ccb964289da7abb3acb70b6868ed05.gif",
+  },
+  {
+    bio: "Bah",
+    imageUrl:
+      "https://yt3.googleusercontent.com/fUoVEfaWzIN1LdEXQAdRTI2agBRkCRQneNOiXcjDyq5cI2TrI-N5c-VJ6SlKpbaFsW9EDBxfCA=s160-c-k-c0x00ffffff-no-rj",
+    alt: "Imagem do Tales",
+    discord: "talis147_04076",
+    whats: "47 99285-0660",
+    subtitle: "Tales",
+    gif: "https://c.tenor.com/t3UqrVuybNYAAAAC/tenor.gif",
   },
 ];
 

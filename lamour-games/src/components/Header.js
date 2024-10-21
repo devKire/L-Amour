@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header>
       <div className="logolamour">
-        <img src="/assets/logo.png" alt="Logo da L'Amour Games" />
+        <img src="https://i.ibb.co/0DwFRnk/L-amour-Games.png" alt="Logo da L'Amour Games" />
       </div>
 
       <h1>L'Amour Games</h1>
